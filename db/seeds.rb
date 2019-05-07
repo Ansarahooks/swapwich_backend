@@ -34,4 +34,4 @@ User.new(name: 'user 9')
 Meal.new(name: 'Fuckin Froot', category: 'Vegan', hot?: false, description: 'user 9', image_url: 'https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2018/06/1faf41a51a8ac3de0f601d860d0e112d5522265c.jpeg', user_id: 9)
 
 User.new(name: 'user 10')
-`Meal.new(name: 'Chicken Noodle Soup', category: 'Chicken', hot?: true, description: 'user 10', image_url: 'https://www.simplyrecipes.com/wp-content/uploads/2018/10/Rotisserie-Chicken-Soup-LEAD-3.jpg', user_id: 10)
+Meal.new(name: 'Chicken Noodle Soup', category: 'Chicken', hot?: true, description: 'user 10', image_url: 'https://www.simplyrecipes.com/wp-content/uploads/2018/10/Rotisserie-Chicken-Soup-LEAD-3.jpg', user_id: 10)

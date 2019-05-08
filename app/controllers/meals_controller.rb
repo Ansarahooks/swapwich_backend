@@ -21,7 +21,11 @@ class MealsController < ApplicationController
 
   def update
     @meal = Meal.find(params[:id])
-    @meal.update(name: params[:name], img_url: params[:img_url], category: params[:category], description: params[:description], hot?: params[:hot?], user_id: params[:user_id])
+    if @meal.update(name: params[:name], img_url: params[:img_url], category: params[:category], description: params[:description], hot?: params[:hot?], user_id: params[:user_id])
+      render json: @meal, status: :ok
+    else
+      render json: {errors: @meal.errors.full_messages}
+    end
   end
 
   private

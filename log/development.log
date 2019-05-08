@@ -652,3 +652,194 @@ No serializer found for resource: #<User id: 1, name: "Abbey", created_at: "2019
 Completed 200 OK in 298ms (Views: 44.3ms | ActiveRecord: 102.8ms)
 
 
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3523054303218445170)[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (41.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to RemoveHot (20190508150752)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (80.1ms)[0m  [1m[35mALTER TABLE "meals" DROP COLUMN "hot?"[0m
+  ↳ db/migrate/20190508150752_remove_hot.rb:3
+  [1m[35m (39.0ms)[0m  [1m[35mALTER TABLE "meals" ADD "hot" boolean[0m
+  ↳ db/migrate/20190508150752_remove_hot.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190508150752"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (40.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3523054303218445170)[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Abbey"], ["created_at", "2019-05-08 15:11:43.883982"], ["updated_at", "2019-05-08 15:11:43.883982"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mMeal Create (3.2ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Cordon Green"], ["img_url", "https://images.pachakam.com/RcpImags/Pachakam_ReceipeImg_8e379c04a7871fc4.jpg"], ["category", "Chicken"], ["description", "It used to be bleu."], ["user_id", 1], ["created_at", "2019-05-08 15:11:44.131967"], ["updated_at", "2019-05-08 15:11:44.131967"], ["hot", false]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BurgerTron2000"], ["created_at", "2019-05-08 15:11:44.140035"], ["updated_at", "2019-05-08 15:11:44.140035"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Burger #12854ky32"], ["img_url", "https://www.chanticleerholdings.com/wp-content/uploads/2019/01/Roadstar-Burger.png"], ["category", "Beef"], ["description", "Temperature maintained at 338 degrees Kelvin."], ["user_id", 2], ["created_at", "2019-05-08 15:11:44.145105"], ["updated_at", "2019-05-08 15:11:44.145105"], ["hot", true]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "User 3"], ["created_at", "2019-05-08 15:11:44.148798"], ["updated_at", "2019-05-08 15:11:44.148798"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Buddha Bowl"], ["img_url", "https://wellandfull.com/wp-content/uploads/2016/02/WellandFull-1-23.jpg"], ["category", "Vegan"], ["description", "user 3"], ["user_id", 3], ["created_at", "2019-05-08 15:11:44.153828"], ["updated_at", "2019-05-08 15:11:44.153828"], ["hot", false]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 4"], ["created_at", "2019-05-08 15:11:44.156809"], ["updated_at", "2019-05-08 15:11:44.156809"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pulled Pork Sandwich"], ["img_url", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/2/0/DG0104H_pulled-pork-sandiwch_s4x3.jpg.rend.hgtvcom.826.620.suffix/1435869335054.jpeg"], ["category", "Pork"], ["description", "user 4"], ["user_id", 4], ["created_at", "2019-05-08 15:11:44.161465"], ["updated_at", "2019-05-08 15:11:44.161465"], ["hot", true]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 5"], ["created_at", "2019-05-08 15:11:44.164362"], ["updated_at", "2019-05-08 15:11:44.164362"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Soba Noodles"], ["img_url", "https://www.foodiecrush.com/wp-content/uploads/2018/12/Sesame-Soba-Noodles-foodiecrush.com-023.jpg"], ["category", "Vegetarian"], ["description", "user 5"], ["user_id", 5], ["created_at", "2019-05-08 15:11:44.168395"], ["updated_at", "2019-05-08 15:11:44.168395"], ["hot", false]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 6"], ["created_at", "2019-05-08 15:11:44.171339"], ["updated_at", "2019-05-08 15:11:44.171339"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tots"], ["img_url", "https://www.aspicyperspective.com/wp-content/uploads/2017/01/taco-tater-tots-6.jpg"], ["category", "Vegan"], ["description", "user 6"], ["user_id", 6], ["created_at", "2019-05-08 15:11:44.175653"], ["updated_at", "2019-05-08 15:11:44.175653"], ["hot", true]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 7"], ["created_at", "2019-05-08 15:11:44.179139"], ["updated_at", "2019-05-08 15:11:44.179139"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cron Doogs"], ["img_url", "https://search.chow.com/thumbnail/1200/0/www.chowstatic.com/assets/recipe_photos/29846_breakfast_cron_dogs.jpg"], ["category", "Chicken"], ["description", "user 7"], ["user_id", 7], ["created_at", "2019-05-08 15:11:44.182881"], ["updated_at", "2019-05-08 15:11:44.182881"], ["hot", true]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 8"], ["created_at", "2019-05-08 15:11:44.186343"], ["updated_at", "2019-05-08 15:11:44.186343"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Seared Sea Animal"], ["img_url", "https://assets.marthastewart.com/styles/wmax-520-highdpi/d24/grilled-fish-8-mld110112/grilled-fish-8-mld110112_horiz.jpg?itok=i5gwpSNl"], ["category", "Fish"], ["description", "user 8"], ["user_id", 8], ["created_at", "2019-05-08 15:11:44.190846"], ["updated_at", "2019-05-08 15:11:44.190846"], ["hot", true]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 9"], ["created_at", "2019-05-08 15:11:44.194487"], ["updated_at", "2019-05-08 15:11:44.194487"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frickin Froot"], ["img_url", "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2018/06/1faf41a51a8ac3de0f601d860d0e112d5522265c.jpeg"], ["category", "Vegan"], ["description", "user 9"], ["user_id", 9], ["created_at", "2019-05-08 15:11:44.198331"], ["updated_at", "2019-05-08 15:11:44.198331"], ["hot", false]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user 10"], ["created_at", "2019-05-08 15:11:44.201618"], ["updated_at", "2019-05-08 15:11:44.201618"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Noodle Soup"], ["img_url", "https://www.simplyrecipes.com/wp-content/uploads/2018/10/Rotisserie-Chicken-Soup-LEAD-3.jpg"], ["category", "Chicken"], ["description", "user 10"], ["user_id", 10], ["created_at", "2019-05-08 15:11:44.205394"], ["updated_at", "2019-05-08 15:11:44.205394"], ["hot", true]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+Started GET "/meals" for ::1 at 2019-05-08 11:12:20 -0400
+Started GET "/users" for ::1 at 2019-05-08 11:12:20 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+Processing by MealsController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mMeal Load (4.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<User id: 1, name: "Abbey", created_at: "2019-05-07 17:34:59", updated_at: "2019-05-07 17:34:59">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 128ms (Views: 75.2ms | ActiveRecord: 15.1ms)
+
+
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Green", img_url: "https://images.pachakam.com/RcpImags/Pachakam_Rece...", category: "Chicken", description: "It used to be bleu.", user_id: 1, created_at: "2019-05-07 17:35:00", updated_at: "2019-05-07 17:35:00", hot: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (5.52ms)
+Completed 200 OK in 136ms (Views: 21.5ms | ActiveRecord: 29.1ms)
+
+

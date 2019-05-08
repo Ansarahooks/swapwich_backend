@@ -19,6 +19,11 @@ class MealsController < ApplicationController
     end
   end
 
+  def update
+    @meal = Meal.find(params[:id])
+    @meal.update(name: params[:name], img_url: params[:img_url], category: params[:category], description: params[:description], hot?: params[:hot?], user_id: params[:user_id])
+  end
+
   private
   def meal_params
     params.permit(:name, :img_url, :category, :description, :hot?, :user_id)

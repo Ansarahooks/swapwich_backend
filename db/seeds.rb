@@ -9,7 +9,7 @@
 # rails db:reset
 
 User.new(name: 'Abbey').save
-Meal.new(name: 'Chicken Cordon Green', category: 'Chicken', hot: false, description: 'It used to be bleu.', img_url: 'https://images.pachakam.com/RcpImags/Pachakam_ReceipeImg_8e379c04a7871fc4.jpg', user_id: 1).save
+Meal.new(name: 'Chicken Cordon Bleu', category: 'Chicken', hot: false, description: 'It used to be green.', img_url: 'https://www.recipetineats.com/wp-content/uploads/2015/10/Easy-Chicken-Cordon-Bleu-2.jpg', user_id: 1).save
 
 User.new(name: 'BurgerTron2000').save
 Meal.new(name: 'Burger #12854ky32', category: 'Beef', hot: true, description: 'Temperature maintained at 338 degrees Kelvin.', img_url: 'https://www.chanticleerholdings.com/wp-content/uploads/2019/01/Roadstar-Burger.png', user_id: 2).save

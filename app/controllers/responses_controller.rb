@@ -1,7 +1,7 @@
 class ResponsesController < ApplicationController
     def index
         @responses = Response.all
-        render json: @user, status: :ok
+        render json: @responses, status: :ok
     end
 
     def create
@@ -15,10 +15,11 @@ class ResponsesController < ApplicationController
     end
 
     def destroy
-        if  User.destroy(params[:id])
-            render json: status: :ok
+        @response = Response.find(params[:id])
+        if  Response.destroy(@response.id)
+            render json: @response, status: :ok
         else
-            render json: status: :no_content
+            render json: {message: 'the destroy failed'}, status: :expectation_failed
         end
     end
 

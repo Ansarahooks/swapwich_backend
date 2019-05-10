@@ -4126,3 +4126,1017 @@ No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_u
 Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (290.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "swapwich_development"[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (178.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "swapwich_test"[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (8702.2ms)[0m  [1m[35mCREATE DATABASE "swapwich_development" ENCODING = 'unicode'[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (730.4ms)[0m  [1m[35mCREATE DATABASE "swapwich_test" ENCODING = 'unicode'[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35mSQL (6.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "name" character varying, "img_url" character varying, "category" character varying, "description" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "hot" boolean)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" CASCADE[0m
+  ↳ db/schema.rb:29
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "user_id" integer, "meal_id" integer, "meal_user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190508150752)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190506194320),
+(20190506194654),
+(20190506193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-10 14:58:11.271265"], ["updated_at", "2019-05-10 14:58:11.271265"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35mSQL (3.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "name" character varying, "img_url" character varying, "category" character varying, "description" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "hot" boolean)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" CASCADE[0m
+  ↳ db/schema.rb:29
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "user_id" integer, "meal_id" integer, "meal_user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190508150752)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190506194320),
+(20190506194654),
+(20190506193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-10 14:58:11.458441"], ["updated_at", "2019-05-10 14:58:11.458441"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (2.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-05-10 14:58:11.464942"], ["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Abbey"], ["created_at", "2019-05-10 14:58:11.583575"], ["updated_at", "2019-05-10 14:58:11.583575"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mMeal Create (4.7ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Cordon Bleu"], ["img_url", "https://www.recipetineats.com/wp-content/uploads/2015/10/Easy-Chicken-Cordon-Bleu-2.jpg"], ["category", "Chicken"], ["description", "It used to be green."], ["user_id", 1], ["created_at", "2019-05-10 14:58:11.838455"], ["updated_at", "2019-05-10 14:58:11.838455"], ["hot", false]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BurgerTron2000"], ["created_at", "2019-05-10 14:58:11.848065"], ["updated_at", "2019-05-10 14:58:11.848065"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMeal Create (0.7ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Burger #12854ky32"], ["img_url", "https://www.chanticleerholdings.com/wp-content/uploads/2019/01/Roadstar-Burger.png"], ["category", "Beef"], ["description", "Temperature maintained at 338 degrees Kelvin."], ["user_id", 2], ["created_at", "2019-05-10 14:58:11.855231"], ["updated_at", "2019-05-10 14:58:11.855231"], ["hot", true]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ken-neth"], ["created_at", "2019-05-10 14:58:11.860534"], ["updated_at", "2019-05-10 14:58:11.860534"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mMeal Create (0.7ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Buddha Bowl"], ["img_url", "https://wellandfull.com/wp-content/uploads/2016/02/WellandFull-1-23.jpg"], ["category", "Vegan"], ["description", "Brah. Avo is, like, the energetic nexus that attracts the different pieces into a unified experience."], ["user_id", 3], ["created_at", "2019-05-10 14:58:11.867381"], ["updated_at", "2019-05-10 14:58:11.867381"], ["hot", false]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cletus"], ["created_at", "2019-05-10 14:58:11.872729"], ["updated_at", "2019-05-10 14:58:11.872729"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMeal Create (1.0ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pulled Pork Sandwich"], ["img_url", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/2/0/DG0104H_pulled-pork-sandiwch_s4x3.jpg.rend.hgtvcom.826.620.suffix/1435869335054.jpeg"], ["category", "Pork"], ["description", "Yall know ye want this"], ["user_id", 4], ["created_at", "2019-05-10 14:58:11.880356"], ["updated_at", "2019-05-10 14:58:11.880356"], ["hot", true]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rhonda"], ["created_at", "2019-05-10 14:58:11.886840"], ["updated_at", "2019-05-10 14:58:11.886840"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMeal Create (0.9ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Soba Noodles"], ["img_url", "https://www.foodiecrush.com/wp-content/uploads/2018/12/Sesame-Soba-Noodles-foodiecrush.com-023.jpg"], ["category", "Vegetarian"], ["description", "Home made, with peanut sauce."], ["user_id", 5], ["created_at", "2019-05-10 14:58:11.895463"], ["updated_at", "2019-05-10 14:58:11.895463"], ["hot", false]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bernice"], ["created_at", "2019-05-10 14:58:11.901490"], ["updated_at", "2019-05-10 14:58:11.901490"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeal Create (0.8ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tots"], ["img_url", "https://www.aspicyperspective.com/wp-content/uploads/2017/01/taco-tater-tots-6.jpg"], ["category", "Vegan"], ["description", "Nutrition is a corporate lie designed to make you buy garbage like broccoli."], ["user_id", 6], ["created_at", "2019-05-10 14:58:11.908294"], ["updated_at", "2019-05-10 14:58:11.908294"], ["hot", true]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "3dgeL0rd27"], ["created_at", "2019-05-10 14:58:11.912970"], ["updated_at", "2019-05-10 14:58:11.912970"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mMeal Create (0.6ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cron Doogs"], ["img_url", "https://search.chow.com/thumbnail/1200/0/www.chowstatic.com/assets/recipe_photos/29846_breakfast_cron_dogs.jpg"], ["category", "Chicken"], ["description", "Suubscrieb to PewDiPie"], ["user_id", 7], ["created_at", "2019-05-10 14:58:11.919495"], ["updated_at", "2019-05-10 14:58:11.919495"], ["hot", true]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eeyore"], ["created_at", "2019-05-10 14:58:11.924154"], ["updated_at", "2019-05-10 14:58:11.924154"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Seared Sea Animal"], ["img_url", "https://assets.marthastewart.com/styles/wmax-520-highdpi/d24/grilled-fish-8-mld110112/grilled-fish-8-mld110112_horiz.jpg?itok=i5gwpSNl"], ["category", "Fish"], ["description", "Maybe I can be useful when I die, too."], ["user_id", 8], ["created_at", "2019-05-10 14:58:11.929221"], ["updated_at", "2019-05-10 14:58:11.929221"], ["hot", true]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dierdre"], ["created_at", "2019-05-10 14:58:11.932854"], ["updated_at", "2019-05-10 14:58:11.932854"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frickin Froot"], ["img_url", "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2018/06/1faf41a51a8ac3de0f601d860d0e112d5522265c.jpeg"], ["category", "Vegan"], ["description", "Ya'll act like you never seen a fruit medley before, jaws all on the floor like apples and oranges just burst in the door."], ["user_id", 9], ["created_at", "2019-05-10 14:58:11.937879"], ["updated_at", "2019-05-10 14:58:11.937879"], ["hot", false]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carl"], ["created_at", "2019-05-10 14:58:11.940465"], ["updated_at", "2019-05-10 14:58:11.940465"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Noodle Soup"], ["img_url", "https://www.simplyrecipes.com/wp-content/uploads/2018/10/Rotisserie-Chicken-Soup-LEAD-3.jpg"], ["category", "Chicken"], ["description", "Looks like I'm all alone. Well, it's all right. I watch a lot of movies, I can just use my imagination."], ["user_id", 10], ["created_at", "2019-05-10 14:58:11.945328"], ["updated_at", "2019-05-10 14:58:11.945328"], ["hot", true]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mResponse Create (2.0ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 14:58:11.965184"], ["updated_at", "2019-05-10 14:58:11.965184"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["meal_id", 9], ["meal_user_id", 9], ["created_at", "2019-05-10 14:58:11.972159"], ["updated_at", "2019-05-10 14:58:11.972159"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 8], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 14:58:11.977387"], ["updated_at", "2019-05-10 14:58:11.977387"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["meal_id", 4], ["meal_user_id", 4], ["created_at", "2019-05-10 14:58:11.982987"], ["updated_at", "2019-05-10 14:58:11.982987"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 7], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 14:58:11.988090"], ["updated_at", "2019-05-10 14:58:11.988090"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+Started GET "/meals" for ::1 at 2019-05-10 11:07:24 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (2.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.87ms)
+Completed 200 OK in 76ms (Views: 38.8ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:08:33 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.73ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:08:37 -0400
+Started GET "/responses" for ::1 at 2019-05-10 11:08:37 -0400
+  
+SyntaxError (/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+...           render json: status: :ok
+...                        ^~~~~~~
+/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+...           render json: status: :no_content
+...                        ^~~~~~~):
+  
+app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+  
+SyntaxError (/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+...           render json: status: :ok
+...                        ^~~~~~~
+/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+...           render json: status: :no_content
+...                        ^~~~~~~):
+  
+app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+Started GET "/meals" for ::1 at 2019-05-10 11:14:12 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.55ms)
+Completed 200 OK in 45ms (Views: 15.9ms | ActiveRecord: 20.5ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:14:17 -0400
+Started GET "/responses" for ::1 at 2019-05-10 11:14:17 -0400
+  
+SyntaxError (/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+...           render json: status: :ok
+...                        ^~~~~~~
+/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+...           render json: status: :expectation_failed
+...                        ^~~~~~~):
+  
+  
+SyntaxError (/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+...           render json: status: :ok
+...                        ^~~~~~~
+/Users/travismartin/Documents/vscode files/projects/swapwich_backend/app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+...           render json: status: :expectation_failed
+...                        ^~~~~~~):
+app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+  
+app/controllers/responses_controller.rb:19: syntax error, unexpected tLABEL
+app/controllers/responses_controller.rb:21: syntax error, unexpected tLABEL
+  [1m[36mResponse Load (1.6ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" ORDER BY "responses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mResponse Load (1.0ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" ORDER BY "responses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mResponse Load (0.4ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" WHERE "responses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResponse Destroy (0.9ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = $1[0m  [["id", 5]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResponse Load (1.1ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" ORDER BY "responses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResponse Destroy (0.7ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResponse Load (0.7ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" ORDER BY "responses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/meals" for ::1 at 2019-05-10 11:26:36 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.61ms)
+Completed 200 OK in 43ms (Views: 15.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:26:43 -0400
+Started POST "/responses" for ::1 at 2019-05-10 11:26:43 -0400
+Processing by ResponsesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.23ms)
+Completed 200 OK in 189ms (Views: 184.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 3,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 101ms (Views: 2.7ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:28:45 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.64ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:28:50 -0400
+Started GET "/responses" for ::1 at 2019-05-10 11:28:50 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+Processing by ResponsesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:29:30 -0400
+Processing by ResponsesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.21ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:30:09 -0400
+Processing by ResponsesController#index as HTML
+  [1m[36mResponse Load (1.6ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:30:32 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.53ms)
+Completed 200 OK in 35ms (Views: 23.9ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:30:35 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+Started GET "/responses" for ::1 at 2019-05-10 11:30:35 -0400
+Processing by ResponsesController#index as */*
+  [1m[36mResponse Load (8.2ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 14:58:11", updated_at: "2019-05-10 14:58:11">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (0.43ms)
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 8.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 16ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mResponse Load (0.7ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5045.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "swapwich_development"[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (186.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "swapwich_development"[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (167.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "swapwich_test"[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (981.5ms)[0m  [1m[35mCREATE DATABASE "swapwich_development" ENCODING = 'unicode'[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (744.2ms)[0m  [1m[35mCREATE DATABASE "swapwich_test" ENCODING = 'unicode'[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "name" character varying, "img_url" character varying, "category" character varying, "description" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "hot" boolean)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" CASCADE[0m
+  ↳ db/schema.rb:29
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "user_id" integer, "meal_id" integer, "meal_user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190508150752)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190506194320),
+(20190506194654),
+(20190506193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-10 15:32:24.391766"], ["updated_at", "2019-05-10 15:32:24.391766"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35mSQL (2.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (35.5ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "name" character varying, "img_url" character varying, "category" character varying, "description" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "hot" boolean)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" CASCADE[0m
+  ↳ db/schema.rb:29
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "user_id" integer, "meal_id" integer, "meal_user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190508150752)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190506194320),
+(20190506194654),
+(20190506193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-10 15:32:24.573494"], ["updated_at", "2019-05-10 15:32:24.573494"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-05-10 15:32:24.579318"], ["key", "environment"]]
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Abbey"], ["created_at", "2019-05-10 15:32:24.655161"], ["updated_at", "2019-05-10 15:32:24.655161"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mMeal Create (2.2ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Cordon Bleu"], ["img_url", "https://www.recipetineats.com/wp-content/uploads/2015/10/Easy-Chicken-Cordon-Bleu-2.jpg"], ["category", "Chicken"], ["description", "It used to be green."], ["user_id", 1], ["created_at", "2019-05-10 15:32:24.702317"], ["updated_at", "2019-05-10 15:32:24.702317"], ["hot", false]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "BurgerTron2000"], ["created_at", "2019-05-10 15:32:24.707819"], ["updated_at", "2019-05-10 15:32:24.707819"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Burger #12854ky32"], ["img_url", "https://www.chanticleerholdings.com/wp-content/uploads/2019/01/Roadstar-Burger.png"], ["category", "Beef"], ["description", "Temperature maintained at 338 degrees Kelvin."], ["user_id", 2], ["created_at", "2019-05-10 15:32:24.712187"], ["updated_at", "2019-05-10 15:32:24.712187"], ["hot", true]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ken-neth"], ["created_at", "2019-05-10 15:32:24.715779"], ["updated_at", "2019-05-10 15:32:24.715779"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Buddha Bowl"], ["img_url", "https://wellandfull.com/wp-content/uploads/2016/02/WellandFull-1-23.jpg"], ["category", "Vegan"], ["description", "Brah. Avo is, like, the energetic nexus that attracts the different pieces into a unified experience."], ["user_id", 3], ["created_at", "2019-05-10 15:32:24.720564"], ["updated_at", "2019-05-10 15:32:24.720564"], ["hot", false]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cletus"], ["created_at", "2019-05-10 15:32:24.724289"], ["updated_at", "2019-05-10 15:32:24.724289"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pulled Pork Sandwich"], ["img_url", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/2/0/DG0104H_pulled-pork-sandiwch_s4x3.jpg.rend.hgtvcom.826.620.suffix/1435869335054.jpeg"], ["category", "Pork"], ["description", "Yall know ye want this"], ["user_id", 4], ["created_at", "2019-05-10 15:32:24.729547"], ["updated_at", "2019-05-10 15:32:24.729547"], ["hot", true]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rhonda"], ["created_at", "2019-05-10 15:32:24.733173"], ["updated_at", "2019-05-10 15:32:24.733173"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Soba Noodles"], ["img_url", "https://www.foodiecrush.com/wp-content/uploads/2018/12/Sesame-Soba-Noodles-foodiecrush.com-023.jpg"], ["category", "Vegetarian"], ["description", "Home made, with peanut sauce."], ["user_id", 5], ["created_at", "2019-05-10 15:32:24.737937"], ["updated_at", "2019-05-10 15:32:24.737937"], ["hot", false]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bernice"], ["created_at", "2019-05-10 15:32:24.741377"], ["updated_at", "2019-05-10 15:32:24.741377"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tots"], ["img_url", "https://www.aspicyperspective.com/wp-content/uploads/2017/01/taco-tater-tots-6.jpg"], ["category", "Vegan"], ["description", "Nutrition is a corporate lie designed to make you buy garbage like broccoli."], ["user_id", 6], ["created_at", "2019-05-10 15:32:24.745964"], ["updated_at", "2019-05-10 15:32:24.745964"], ["hot", true]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "3dgeL0rd27"], ["created_at", "2019-05-10 15:32:24.749723"], ["updated_at", "2019-05-10 15:32:24.749723"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cron Doogs"], ["img_url", "https://search.chow.com/thumbnail/1200/0/www.chowstatic.com/assets/recipe_photos/29846_breakfast_cron_dogs.jpg"], ["category", "Chicken"], ["description", "Suubscrieb to PewDiPie"], ["user_id", 7], ["created_at", "2019-05-10 15:32:24.754694"], ["updated_at", "2019-05-10 15:32:24.754694"], ["hot", true]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Eeyore"], ["created_at", "2019-05-10 15:32:24.758449"], ["updated_at", "2019-05-10 15:32:24.758449"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Seared Sea Animal"], ["img_url", "https://assets.marthastewart.com/styles/wmax-520-highdpi/d24/grilled-fish-8-mld110112/grilled-fish-8-mld110112_horiz.jpg?itok=i5gwpSNl"], ["category", "Fish"], ["description", "Maybe I can be useful when I die, too."], ["user_id", 8], ["created_at", "2019-05-10 15:32:24.763332"], ["updated_at", "2019-05-10 15:32:24.763332"], ["hot", true]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dierdre"], ["created_at", "2019-05-10 15:32:24.767035"], ["updated_at", "2019-05-10 15:32:24.767035"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frickin Froot"], ["img_url", "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2018/06/1faf41a51a8ac3de0f601d860d0e112d5522265c.jpeg"], ["category", "Vegan"], ["description", "Ya'll act like you never seen a fruit medley before, jaws all on the floor like apples and oranges just burst in the door."], ["user_id", 9], ["created_at", "2019-05-10 15:32:24.771846"], ["updated_at", "2019-05-10 15:32:24.771846"], ["hot", false]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Carl"], ["created_at", "2019-05-10 15:32:24.775436"], ["updated_at", "2019-05-10 15:32:24.775436"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("name", "img_url", "category", "description", "user_id", "created_at", "updated_at", "hot") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chicken Noodle Soup"], ["img_url", "https://www.simplyrecipes.com/wp-content/uploads/2018/10/Rotisserie-Chicken-Soup-LEAD-3.jpg"], ["category", "Chicken"], ["description", "Looks like I'm all alone. Well, it's all right. I watch a lot of movies, I can just use my imagination."], ["user_id", 10], ["created_at", "2019-05-10 15:32:24.780191"], ["updated_at", "2019-05-10 15:32:24.780191"], ["hot", true]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mMeal Load (0.7ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mResponse Create (2.1ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 15:32:24.802116"], ["updated_at", "2019-05-10 15:32:24.802116"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["meal_id", 9], ["meal_user_id", 9], ["created_at", "2019-05-10 15:32:24.809642"], ["updated_at", "2019-05-10 15:32:24.809642"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 8], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 15:32:24.814935"], ["updated_at", "2019-05-10 15:32:24.814935"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["meal_id", 4], ["meal_user_id", 4], ["created_at", "2019-05-10 15:32:24.820408"], ["updated_at", "2019-05-10 15:32:24.820408"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mResponse Create (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("user_id", "meal_id", "meal_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 7], ["meal_id", 2], ["meal_user_id", 2], ["created_at", "2019-05-10 15:32:24.826204"], ["updated_at", "2019-05-10 15:32:24.826204"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+Started GET "/meals" for ::1 at 2019-05-10 11:32:52 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 45ms (Views: 22.1ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:32:55 -0400
+Started GET "/responses" for ::1 at 2019-05-10 11:32:55 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Processing by ResponsesController#index as */*
+Completed 200 OK in 40ms (Views: 7.1ms | ActiveRecord: 6.1ms)
+
+
+  [1m[36mResponse Load (3.4ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:39:03 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (2.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.69ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:39:06 -0400
+Started POST "/responses" for ::1 at 2019-05-10 11:39:06 -0400
+Processing by ResponsesController#index as */*
+  [1m[36mResponse Load (2.0ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (1.56ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 2.0ms)
+
+
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:43:55 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.52ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:43:58 -0400
+Started POST "/responses" for ::1 at 2019-05-10 11:43:58 -0400
+Processing by ResponsesController#create as */*
+Processing by ResponsesController#index as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+  [1m[36mResponse Load (3.7ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (4.05ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:45:34 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.65ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:45:37 -0400
+Started GET "/responses" for ::1 at 2019-05-10 11:45:37 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: undefined\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+Processing by ResponsesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mResponse Load (0.7ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (1.85ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:46:50 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.16ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:50:57 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.48ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 11:53:51 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.25ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 11:55:30 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: 7\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/responses" for ::1 at 2019-05-10 11:55:47 -0400
+Processing by ResponsesController#index as */*
+  [1m[36mResponse Load (0.5ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (1.36ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 12:00:32 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.93ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 12:00:36 -0400
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: 7\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+Started GET "/responses" for ::1 at 2019-05-10 12:00:36 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Processing by ResponsesController#index as */*
+  [1m[36mResponse Load (2.5ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  ↳ app/controllers/responses_controller.rb:4
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 12:02:44 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (2.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.3ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 12:02:47 -0400
+Started GET "/responses" for ::1 at 2019-05-10 12:02:47 -0400
+Processing by ResponsesController#create as */*
+Processing by ResponsesController#index as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: 7\n                        }", "response"=>{}}
+Unpermitted parameters: :_json, :response
+  [1m[36mResponse Load (0.6ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+  ↳ app/controllers/responses_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (1.59ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 12:05:11 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Bleu", img_url: "https://www.recipetineats.com/wp-content/uploads/2...", category: "Chicken", description: "It used to be green.", user_id: 1, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24", hot: false>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.41ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/responses" for ::1 at 2019-05-10 12:05:14 -0400
+Started GET "/responses" for ::1 at 2019-05-10 12:05:14 -0400
+Processing by ResponsesController#index as */*
+Processing by ResponsesController#create as */*
+  Parameters: {"_json"=>"{\n                          user_id: 2,\n                          meal_id: 7,\n                          meal_user_id: 7\n                        }", "response"=>{}}
+  [1m[36mResponse Load (1.7ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+Unpermitted parameters: :_json, :response
+  ↳ app/controllers/responses_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+No serializer found for resource: #<Response id: 1, user_id: 3, meal_id: 2, meal_user_id: 2, created_at: "2019-05-10 15:32:24", updated_at: "2019-05-10 15:32:24">
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Response::ActiveRecord_Relation (0.61ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.7ms)
+
+

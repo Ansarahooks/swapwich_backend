@@ -4007,3 +4007,122 @@ No serializer found for resource: #<Meal id: 1, name: "Chicken Cordon Green", im
 Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 7.9ms)
 
 
+Started GET "/meals" for ::1 at 2019-05-10 09:47:15 -0400
+  [1m[35m (41.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/travismartin/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (42.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.67ms)
+Completed 200 OK in 282ms (Views: 67.7ms | ActiveRecord: 132.0ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:47:20 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.65ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:47:25 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.64ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:47:32 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (2.11ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:47:40 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (2.79ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:52:23 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (2.83ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:52:35 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:52:42 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (5.19ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:59:23 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (1.94ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:59:27 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.11ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 09:59:52 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (2.91ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 10:02:16 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (1.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (3.02ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/meals" for ::1 at 2019-05-10 10:02:32 -0400
+Processing by MealsController#index as */*
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals"[0m
+  ↳ app/controllers/meals_controller.rb:5
+No serializer found for resource: #<Meal id: 1, name: "Burger #12854ky32", img_url: "https://www.chanticleerholdings.com/wp-content/upl...", category: "Beef", description: "Temperature maintained at 338 degrees Kelvin.", user_id: 2, created_at: "2019-05-09 16:58:17", updated_at: "2019-05-09 16:58:17", hot: true>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Meal::ActiveRecord_Relation (2.95ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
